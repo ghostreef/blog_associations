@@ -7,6 +7,8 @@ class Tag < ActiveRecord::Base
   # validates_presence_of :tag, :color
   # validates_uniqueness_of :tag
 
+  has_and_belongs_to_many :posts
+
   before_create do
     self.count = 0
   end
