@@ -1,0 +1,15 @@
+<%= simple_form_for(@post) do |f| %>
+
+  <% if @post.errors.any? %>
+      <p><%= pluralize(@post.errors.count, 'error') %> prohibited this post from being saved:</p>
+      <ul>
+        <% @post.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+  <% end %>
+
+  <%= f.input :title %>
+  <%= f.input :text %>
+  <%= f.submit %>
+<% end %>

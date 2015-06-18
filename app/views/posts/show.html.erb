@@ -1,0 +1,13 @@
+<% title "Post - #{@post.id}" %>
+<h3><%= "Post - #{@post.id}" %></h3>
+
+<dl>
+  <dt>title</dt>
+  <dd><%= @post.title %></dd>
+
+  <dt>text</dt>
+  <dd><%= @post.text %></dd>
+</dl>
+
+<%= link_to 'Edit', edit_post_path %>
+<%= link_to 'Back', posts_path %>
