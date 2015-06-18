@@ -1,0 +1,16 @@
+<% title "Tag - #{@tag.id}" %>
+<h3><%= "Tag - #{@tag.id}" %></h3>
+
+<dl>
+  <dt>color</dt>
+  <dd><%= @tag.color %></dd>
+
+  <dt>tag</dt>
+  <dd><%= @tag.tag %></dd>
+
+  <dt>count</dt>
+  <dd><%= @tag.count %></dd>
+</dl>
+
+<%= link_to 'Edit', edit_tag_path %>
+<%= link_to 'Back', tags_path %>

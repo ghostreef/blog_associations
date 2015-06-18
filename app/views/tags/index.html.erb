@@ -1,0 +1,30 @@
+<% title 'Tags' %>
+<h3>Tags</h3>
+
+<%= link_to 'New Tag', new_tag_path %>
+<table>
+  <thead>
+  <tr>
+    <th>id</th>
+    <th>color</th>
+    <th>tag</th>
+    <th>count</th>
+    <th>&nbsp;</th>
+    <th>&nbsp;</th>
+    <th>&nbsp;</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @tags.each do |tag| %>
+    <tr>
+      <td><%= tag.id %></td>
+      <td><%= tag.color %></td>
+      <td><%= tag.tag %></td>
+      <td><%= tag.count%></td>
+      <td><%= link_to('show',tag_path(tag)) %></td>
+      <td><%= link_to('edit', edit_tag_path(tag)) %></td>
+      <td><%= link_to('delete', tag_path(tag), method: :delete, data: { confirm: 'Are you sure?' } )%></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
